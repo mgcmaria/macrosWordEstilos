@@ -1,0 +1,17 @@
+Private Sub AbrirFichero_Click()
+
+Dim Path As String
+Dim dlgOpen As FileDialog
+Dim doc As Document
+Dim docFound As Boolean
+
+Set dlgOpen = Application.FileDialog(FileDialogType:=msoFileDialogOpen)
+
+With dlgOpen
+ .AllowMultiSelect = False
+ .Show
+ .Execute
+ Path = .SelectedItems(1)
+End With
+
+End Sub
