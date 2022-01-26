@@ -1,3 +1,4 @@
+'Con esta macro, salta un cuadro de diálogo y seleccionamos un fichero.
 Private Sub AbrirFichero_Click()
 
 Dim Path As String
