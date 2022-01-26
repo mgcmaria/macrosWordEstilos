@@ -1,0 +1,21 @@
+Sub Activar_Documento()
+
+'Esta macro nos auda a Activar un Documento en el caso de que tengamos más de uno abierto.
+
+Dim docOpen As Document
+ 
+'Para cada documento que tengamos abierto
+For Each docOpen In Documents
+    'Si el documento no se llama como indicamos y detecta que hay alguno abierto lo activamos
+    'En caso de que no encuentre ningún otro documento saltará mensaje
+    If docOpen.Name <> "Documento1.docm" Then
+        docOpen.Activate
+        'MsgBox "DocumentoXX activado."
+        Exit For
+    'Else
+       'MsgBox "Error al activar DocumentoXX"
+       'Exit Sub
+    End If
+Next docOpen
+
+End Sub
